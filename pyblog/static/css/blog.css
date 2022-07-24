@@ -1,0 +1,38 @@
+h1 a, h2 a{
+    color: rgb(20, 10, 173);
+}
+
+body{
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+.page-header{
+    background-color: tomato;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+
+}
+
+.page-header h1 a{
+    color: white;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.data{
+    color: goldenrod;
+}
+
+.card-body{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+}
+
+.post{
+    padding-left: 20px;
+}

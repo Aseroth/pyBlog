@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="pl">
-    <head>
-        <meta charset="UTF-8">
-        <title>pyBlog</title>
-    </head>
-    <body>
-        <div>
-            <h1>pyBlog</h1>
-            <p>Witam na stronie!</p>
+    {% extends 'pyblog/base.html' %}
+    
+    {% block content %}
+        {% for post in posts %}
+        <div class="post">
+            <img src="{{post.image.url}}" class="img" alt="Obrazek" width="40%"><br>
+            <div class="data">
+                <p>Opublikowany: {{post.publishe_date}}</p>
+                <div><h2><b><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></b></h2></div>
+            </div>
+            <em>{{post.text | linebreaksbr }}</em>
         </div>
-
-        <div>
-            <ul>
-                <li>DO zrobienia</li>
-                <li>Nauka nauka nauka</li>
-            </ul>
-        </div>
-        
-    </body>
-</html>
+        {% endfor %}
+    {% endblock %}
+ 
